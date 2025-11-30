@@ -1,6 +1,14 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { Phone, Mail, MapPin, Facebook, Instagram, Twitter, Youtube } from "lucide-react";
+import {
+  Phone,
+  Mail,
+  MapPin,
+  Facebook,
+  Instagram,
+  Twitter,
+  Youtube,
+} from "lucide-react";
 
 const footerLinks = {
   explore: [
@@ -49,7 +57,8 @@ export default function Footer() {
               Stay Connected
             </motion.h3>
             <p className="text-white/60 mb-8">
-              Subscribe to receive exclusive offers, updates, and luxury travel inspiration.
+              Subscribe to receive exclusive offers, updates, and luxury travel
+              inspiration.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
               <input
@@ -81,20 +90,27 @@ export default function Footer() {
               </div>
             </Link>
             <p className="text-white/60 mb-6 max-w-sm leading-relaxed">
-              Experience world-class luxury in the heart of elegance. Where every moment becomes an unforgettable memory.
+              Experience world-class luxury in the heart of elegance. Where
+              every moment becomes an unforgettable memory.
             </p>
             <div className="space-y-3">
-              <a href="tel:+491234567890" className="flex items-center gap-3 text-white/60 hover:text-gold transition-colors">
+              <a
+                href="tel:+491234567890"
+                className="flex items-center gap-3 text-white/60 hover:text-gold transition-colors"
+              >
                 <Phone className="w-5 h-5 text-gold" />
-                <span>+49 123 456 7890</span>
+                <span>+251 22 112 7320</span>
               </a>
-              <a href="mailto:info@germanhotel.com" className="flex items-center gap-3 text-white/60 hover:text-gold transition-colors">
+              <a
+                href="mailto:info@germanhotel.com"
+                className="flex items-center gap-3 text-white/60 hover:text-gold transition-colors"
+              >
                 <Mail className="w-5 h-5 text-gold" />
                 <span>info@germanhotel.com</span>
               </a>
               <div className="flex items-start gap-3 text-white/60">
                 <MapPin className="w-5 h-5 text-gold flex-shrink-0" />
-                <span>Königsallee 1, 40212 Düsseldorf, Germany</span>
+                <span>Main Road, Adama</span>
               </div>
             </div>
           </div>
@@ -166,9 +182,14 @@ export default function Footer() {
             ))}
           </div>
           <p className="text-white/40 text-sm text-center">
-            © {new Date().getFullYear()} German Hotel. All rights reserved. | 
-            <Link to="/contact" className="hover:text-gold ml-2">Privacy Policy</Link> | 
-            <Link to="/contact" className="hover:text-gold ml-2">Terms of Service</Link>
+            © {new Date().getFullYear()} German Hotel. All rights reserved. |
+            <Link to="/contact" className="hover:text-gold ml-2">
+              Privacy Policy
+            </Link>{" "}
+            |
+            <Link to="/contact" className="hover:text-gold ml-2">
+              Terms of Service
+            </Link>
           </p>
         </div>
       </div>
