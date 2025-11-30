@@ -44,7 +44,7 @@ export default function Header() {
               className="flex items-center gap-2 hover:text-gold transition-colors"
             >
               <Phone className="w-4 h-4" />
-              <span>+49 123 456 7890</span>
+              <span>+251 22 112 7320</span>
             </a>
             <a
               href="mailto:info@germanhotel.com"
