@@ -9,6 +9,7 @@ interface LayoutProps {
 
 export default function Layout({ children }: LayoutProps) {
   const { pathname } = useLocation();
+  console.log(pathname);
 
   useEffect(() => {
     window.scrollTo(0, 0);

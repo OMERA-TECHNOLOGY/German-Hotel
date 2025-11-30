@@ -61,8 +61,8 @@ export default function Hero() {
           transition={{ delay: 0.7, duration: 0.8 }}
           className="max-w-2xl text-lg md:text-xl text-white/80 mb-10 leading-relaxed"
         >
-          Discover the pinnacle of hospitality at German Hotel, where refined elegance 
-          meets exceptional service in every detail of your stay.
+          Discover the pinnacle of hospitality at German Hotel, where refined
+          elegance meets exceptional service in every detail of your stay.
         </motion.p>
 
         {/* CTA Buttons */}
@@ -75,7 +75,10 @@ export default function Hero() {
           <Link to="/rooms" className="btn-luxury">
             Explore Rooms
           </Link>
-          <Link to="/contact" className="btn-luxury-outline text-white border-white/50 hover:border-gold hover:text-gold">
+          <Link
+            to="/contact"
+            className="btn-luxury-outline text-white border-white/50 hover:border-gold hover:text-gold"
+          >
             Book Your Stay
           </Link>
         </motion.div>
@@ -90,7 +93,9 @@ export default function Hero() {
           <span className="w-12 h-12 flex items-center justify-center rounded-full border border-white/30 group-hover:border-gold group-hover:bg-gold/10 transition-all">
             <Play className="w-5 h-5 ml-1" />
           </span>
-          <span className="font-body text-sm uppercase tracking-wider">Virtual Tour</span>
+          <span className="font-body text-sm uppercase tracking-wider">
+            Virtual Tour
+          </span>
         </motion.button>
       </div>
 
@@ -121,12 +126,18 @@ export default function Hero() {
           className="flex items-center gap-4 text-white/60"
         >
           <div className="text-right">
-            <span className="block text-xs uppercase tracking-wider">Five Star</span>
-            <span className="block text-xs uppercase tracking-wider">Luxury Hotel</span>
+            <span className="block text-xs uppercase tracking-wider">
+              Five Star
+            </span>
+            <span className="block text-xs uppercase tracking-wider">
+              Luxury Hotel
+            </span>
           </div>
           <div className="flex gap-1">
             {[...Array(5)].map((_, i) => (
-              <span key={i} className="text-gold text-lg">★</span>
+              <span key={i} className="text-gold text-lg">
+                ★
+              </span>
             ))}
           </div>
         </motion.div>

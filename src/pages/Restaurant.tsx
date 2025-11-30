@@ -14,21 +14,25 @@ const menuCategories = [
 const signatureDishes = [
   {
     name: "Wagyu Beef Tenderloin",
-    description: "A5 Japanese Wagyu, truffle jus, seasonal vegetables, potato mousseline",
+    description:
+      "A5 Japanese Wagyu, truffle jus, seasonal vegetables, potato mousseline",
     price: "€95",
-    image: "https://images.unsplash.com/photo-1546833998-877b37c2e5c6?auto=format&fit=crop&w=600&q=80",
+    image:
+      "https://images.unsplash.com/photo-1546833998-877b37c2e5c6?auto=format&fit=crop&w=600&q=80",
   },
   {
     name: "Lobster Thermidor",
     description: "Brittany lobster, cognac cream, gruyère gratin, fine herbs",
     price: "€78",
-    image: "https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=600&q=80",
+    image:
+      "https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=600&q=80",
   },
   {
     name: "Tasting Menu",
     description: "8-course journey through seasonal flavors with wine pairing",
     price: "€185",
-    image: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=600&q=80",
+    image:
+      "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=600&q=80",
   },
 ];
 
@@ -50,7 +54,7 @@ export default function Restaurant() {
           }}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-navy/60 via-navy/40 to-navy/80" />
-        
+
         <div className="relative text-center px-6">
           <motion.div
             initial={{ opacity: 0, y: 10 }}
@@ -77,7 +81,7 @@ export default function Restaurant() {
             transition={{ delay: 0.2 }}
             className="max-w-2xl mx-auto text-white/80 text-lg mb-8"
           >
-            An extraordinary culinary journey where art meets gastronomy, 
+            An extraordinary culinary journey where art meets gastronomy,
             crafted by our award-winning culinary team.
           </motion.p>
           <motion.div
@@ -104,7 +108,9 @@ export default function Restaurant() {
                 transition={{ delay: index * 0.1 }}
                 className="text-center"
               >
-                <span className="block text-gold font-display text-lg">{cat.name}</span>
+                <span className="block text-gold font-display text-lg">
+                  {cat.name}
+                </span>
                 <span className="text-white/60 text-sm">{cat.time}</span>
               </motion.div>
             ))}
@@ -129,32 +135,42 @@ export default function Restaurant() {
               </h2>
               <div className="gold-line w-24 mb-8" />
               <p className="text-muted-foreground leading-relaxed mb-6">
-                The Grand Restaurant offers an unparalleled dining experience where traditional 
-                techniques meet innovative culinary artistry. Our kitchen sources the finest 
-                seasonal ingredients from local farmers and artisans, as well as premium 
-                imports from around the world.
+                The Grand Restaurant offers an unparalleled dining experience
+                where traditional techniques meet innovative culinary artistry.
+                Our kitchen sources the finest seasonal ingredients from local
+                farmers and artisans, as well as premium imports from around the
+                world.
               </p>
               <p className="text-muted-foreground leading-relaxed mb-8">
-                Under the direction of Executive Chef Hans Weber, our team creates dishes 
-                that delight the senses and tell a story with every bite. The elegant dining 
-                room, with its crystal chandeliers and panoramic city views, provides the 
-                perfect backdrop for memorable occasions.
+                Under the direction of Executive Chef Hans Weber, our team
+                creates dishes that delight the senses and tell a story with
+                every bite. The elegant dining room, with its crystal
+                chandeliers and panoramic city views, provides the perfect
+                backdrop for memorable occasions.
               </p>
-              
+
               {/* Awards */}
               <div className="flex flex-wrap gap-6">
                 <div className="flex items-center gap-3">
                   <Award className="w-8 h-8 text-gold" />
                   <div>
-                    <span className="block text-navy font-medium">Michelin Star</span>
-                    <span className="text-sm text-muted-foreground">2020-2024</span>
+                    <span className="block text-navy font-medium">
+                      Michelin Star
+                    </span>
+                    <span className="text-sm text-muted-foreground">
+                      2020-2024
+                    </span>
                   </div>
                 </div>
                 <div className="flex items-center gap-3">
                   <Award className="w-8 h-8 text-gold" />
                   <div>
-                    <span className="block text-navy font-medium">World's Best</span>
-                    <span className="text-sm text-muted-foreground">Top 100 Restaurants</span>
+                    <span className="block text-navy font-medium">
+                      World's Best
+                    </span>
+                    <span className="text-sm text-muted-foreground">
+                      Top 100 Restaurants
+                    </span>
                   </div>
                 </div>
               </div>
@@ -167,13 +183,15 @@ export default function Restaurant() {
               className="relative"
             >
               <img
-                src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=800&q=80"
+                src="../../public/photo_2025-11-30_15-28-47.jpg"
                 alt="Fine Dining"
                 className="rounded-lg shadow-2xl"
               />
               <div className="absolute -bottom-6 -left-6 bg-gold p-6 rounded-lg shadow-xl">
                 <ChefHat className="w-8 h-8 text-navy mb-2" />
-                <span className="block text-navy font-display text-lg">Chef Hans Weber</span>
+                <span className="block text-navy font-display text-lg">
+                  Chef Hans Weber
+                </span>
                 <span className="text-navy/70 text-sm">Executive Chef</span>
               </div>
             </motion.div>
@@ -209,7 +227,9 @@ export default function Restaurant() {
                     />
                     <div className="image-overlay-subtle" />
                     <div className="absolute bottom-4 right-4 bg-gold px-4 py-2 rounded">
-                      <span className="font-display text-navy">{dish.price}</span>
+                      <span className="font-display text-navy">
+                        {dish.price}
+                      </span>
                     </div>
                   </div>
                   <div className="p-6">
@@ -245,9 +265,13 @@ export default function Restaurant() {
                 transition={{ delay: index * 0.1 }}
                 className="p-8 border border-gold/30 rounded-lg text-center hover:border-gold transition-colors"
               >
-                <h3 className="font-display text-xl text-gold mb-2">{wine.name}</h3>
+                <h3 className="font-display text-xl text-gold mb-2">
+                  {wine.name}
+                </h3>
                 <p className="text-white/60 mb-4">{wine.region}</p>
-                <span className="font-display text-2xl text-white">{wine.price}</span>
+                <span className="font-display text-2xl text-white">
+                  {wine.price}
+                </span>
               </motion.div>
             ))}
           </div>
@@ -273,8 +297,8 @@ export default function Restaurant() {
               transition={{ delay: 0.1 }}
               className="text-muted-foreground mb-8"
             >
-              For reservations, special dietary requirements, or private dining inquiries, 
-              please contact our restaurant team.
+              For reservations, special dietary requirements, or private dining
+              inquiries, please contact our restaurant team.
             </motion.p>
 
             <motion.div
@@ -284,7 +308,10 @@ export default function Restaurant() {
               transition={{ delay: 0.2 }}
               className="flex flex-col sm:flex-row gap-4 justify-center mb-8"
             >
-              <a href="tel:+491234567891" className="flex items-center justify-center gap-2 text-navy hover:text-gold transition-colors">
+              <a
+                href="tel:+491234567891"
+                className="flex items-center justify-center gap-2 text-navy hover:text-gold transition-colors"
+              >
                 <Phone className="w-5 h-5" />
                 <span>+49 123 456 7891</span>
               </a>

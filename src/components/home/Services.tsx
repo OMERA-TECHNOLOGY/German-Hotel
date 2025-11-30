@@ -1,50 +1,66 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { Bed, Utensils, Wine, Dumbbell, Sparkles, Calendar } from "lucide-react";
+import {
+  Bed,
+  Utensils,
+  Wine,
+  Dumbbell,
+  Sparkles,
+  Calendar,
+} from "lucide-react";
 import SectionHeading from "../ui/SectionHeading";
 
 const services = [
   {
     icon: Bed,
     title: "Rooms & Suites",
-    description: "Luxuriously appointed accommodations with stunning views and premium amenities.",
+    description:
+      "Luxuriously appointed accommodations with stunning views and premium amenities.",
     path: "/rooms",
-    image: "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?auto=format&fit=crop&w=800&q=80",
+    image: "../../public/photo_2025-11-30_15-02-06.jpg",
   },
   {
     icon: Utensils,
     title: "Fine Dining",
-    description: "Exquisite culinary experiences crafted by world-renowned chefs.",
+    description:
+      "Exquisite culinary experiences crafted by world-renowned chefs.",
     path: "/restaurant",
-    image: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=800&q=80",
+    image:
+      "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=800&q=80",
   },
   {
     icon: Wine,
     title: "Bar & Lounge",
-    description: "Sophisticated atmosphere with premium cocktails and live entertainment.",
+    description:
+      "Sophisticated atmosphere with premium cocktails and live entertainment.",
     path: "/bar",
-    image: "https://images.unsplash.com/photo-1470337458703-46ad1756a187?auto=format&fit=crop&w=800&q=80",
+    image: "../../public/504228620_3036264849862020_9005698980285329747_n.jpg",
   },
   {
     icon: Dumbbell,
     title: "Fitness Center",
     description: "State-of-the-art equipment with personal training services.",
     path: "/gym",
-    image: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=800&q=80",
+    image:
+      "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=800&q=80",
   },
   {
     icon: Sparkles,
     title: "Spa & Wellness",
-    description: "Rejuvenating treatments in a tranquil sanctuary of relaxation.",
+    description:
+      "Rejuvenating treatments in a tranquil sanctuary of relaxation.",
     path: "/spa",
-    image: "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=800&q=80",
+    image:
+      "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=800&q=80",
   },
   {
     icon: Calendar,
     title: "Events",
-    description: "Magnificent venues for weddings, conferences, and celebrations.",
+    description:
+      "Magnificent venues for weddings, conferences, and celebrations.",
     path: "/events",
-    image: "https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=800&q=80",
+    image:
+      "https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=800&q=80",
   },
 ];
 
@@ -77,7 +93,7 @@ export default function Services() {
                       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-navy/80 via-navy/20 to-transparent" />
-                    
+
                     {/* Icon */}
                     <div className="absolute bottom-4 left-4 w-14 h-14 flex items-center justify-center rounded-full bg-gold/90 backdrop-blur-sm transform group-hover:scale-110 transition-transform duration-300">
                       <service.icon className="w-6 h-6 text-navy" />

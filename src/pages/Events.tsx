@@ -2,7 +2,16 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import Layout from "@/components/layout/Layout";
 import SectionHeading from "@/components/ui/SectionHeading";
-import { Heart, Briefcase, PartyPopper, Users, Monitor, Mic, UtensilsCrossed, Music } from "lucide-react";
+import {
+  Heart,
+  Briefcase,
+  PartyPopper,
+  Users,
+  Monitor,
+  Mic,
+  UtensilsCrossed,
+  Music,
+} from "lucide-react";
 
 const eventTypes = [
   {
@@ -10,27 +19,45 @@ const eventTypes = [
     icon: Heart,
     name: "Weddings",
     description: "Create the wedding of your dreams in our magnificent venues.",
-    image: "https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=800&q=80",
+    image:
+      "https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=800&q=80",
     capacity: "Up to 300 guests",
-    features: ["Grand Ballroom", "Outdoor Garden", "Bridal Suite", "Customized Menus"],
+    features: [
+      "Grand Ballroom",
+      "Outdoor Garden",
+      "Bridal Suite",
+      "Customized Menus",
+    ],
   },
   {
     id: "corporate",
     icon: Briefcase,
     name: "Corporate Events",
-    description: "Impress clients and inspire teams in our professional spaces.",
-    image: "https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=800&q=80",
+    description:
+      "Impress clients and inspire teams in our professional spaces.",
+    image:
+      "https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=800&q=80",
     capacity: "Up to 200 guests",
-    features: ["Conference Rooms", "AV Equipment", "Business Center", "Catering"],
+    features: [
+      "Conference Rooms",
+      "AV Equipment",
+      "Business Center",
+      "Catering",
+    ],
   },
   {
     id: "celebrations",
     icon: PartyPopper,
     name: "Private Celebrations",
     description: "Celebrate life's milestones in style and elegance.",
-    image: "https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&w=800&q=80",
+    image: "../../public/504189505_3036264959862009_483520191979593457_n.jpg",
     capacity: "Up to 150 guests",
-    features: ["Private Dining", "Entertainment", "Custom Themes", "Bartenders"],
+    features: [
+      "Private Dining",
+      "Entertainment",
+      "Custom Themes",
+      "Bartenders",
+    ],
   },
 ];
 
@@ -40,36 +67,55 @@ const venues = [
     size: "600 m²",
     capacity: "300 guests",
     style: "Elegant & Versatile",
-    image: "https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=800&q=80",
+    image:
+      "https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=800&q=80",
   },
   {
     name: "Crystal Room",
     size: "200 m²",
     capacity: "100 guests",
     style: "Intimate & Sophisticated",
-    image: "https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&w=800&q=80",
+    image:
+      "https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&w=800&q=80",
   },
   {
     name: "Rooftop Terrace",
     size: "400 m²",
     capacity: "150 guests",
     style: "Open-Air & Scenic",
-    image: "https://images.unsplash.com/photo-1505236858219-8359eb29e329?auto=format&fit=crop&w=800&q=80",
+    image:
+      "https://images.unsplash.com/photo-1505236858219-8359eb29e329?auto=format&fit=crop&w=800&q=80",
   },
   {
     name: "Executive Boardroom",
     size: "80 m²",
     capacity: "20 guests",
     style: "Professional & Private",
-    image: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80",
+    image: "../../public/30531504_961700080651851_4006167939760783360_n.jpg",
   },
 ];
 
 const services = [
-  { icon: UtensilsCrossed, name: "Gourmet Catering", description: "Customized menus by our award-winning chefs" },
-  { icon: Music, name: "Entertainment", description: "Live bands, DJs, and performance artists" },
-  { icon: Monitor, name: "AV Technology", description: "State-of-the-art sound and visual systems" },
-  { icon: Users, name: "Event Planning", description: "Dedicated coordinators for seamless execution" },
+  {
+    icon: UtensilsCrossed,
+    name: "Gourmet Catering",
+    description: "Customized menus by our award-winning chefs",
+  },
+  {
+    icon: Music,
+    name: "Entertainment",
+    description: "Live bands, DJs, and performance artists",
+  },
+  {
+    icon: Monitor,
+    name: "AV Technology",
+    description: "State-of-the-art sound and visual systems",
+  },
+  {
+    icon: Users,
+    name: "Event Planning",
+    description: "Dedicated coordinators for seamless execution",
+  },
 ];
 
 export default function Events() {
@@ -84,7 +130,7 @@ export default function Events() {
           }}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-navy/60 via-navy/40 to-navy/80" />
-        
+
         <div className="relative text-center px-6">
           <motion.span
             initial={{ opacity: 0, y: 10 }}
@@ -107,7 +153,7 @@ export default function Events() {
             transition={{ delay: 0.2 }}
             className="max-w-2xl mx-auto text-white/80 text-lg mb-8"
           >
-            From intimate gatherings to grand celebrations, our versatile venues 
+            From intimate gatherings to grand celebrations, our versatile venues
             and expert team create extraordinary events.
           </motion.p>
           <motion.div
@@ -153,18 +199,25 @@ export default function Events() {
                   </div>
                 </div>
                 <div className="p-6">
-                  <h3 className="font-display text-2xl text-navy mb-2">{event.name}</h3>
+                  <h3 className="font-display text-2xl text-navy mb-2">
+                    {event.name}
+                  </h3>
                   <p className="text-gold text-sm mb-3">{event.capacity}</p>
-                  <p className="text-muted-foreground mb-4">{event.description}</p>
+                  <p className="text-muted-foreground mb-4">
+                    {event.description}
+                  </p>
                   <div className="flex flex-wrap gap-2 mb-4">
                     {event.features.map((feature) => (
-                      <span key={feature} className="px-3 py-1 bg-muted text-xs text-muted-foreground rounded-full">
+                      <span
+                        key={feature}
+                        className="px-3 py-1 bg-muted text-xs text-muted-foreground rounded-full"
+                      >
                         {feature}
                       </span>
                     ))}
                   </div>
-                  <Link 
-                    to={`/events/${event.id}`} 
+                  <Link
+                    to={`/events/${event.id}`}
                     className="text-gold font-medium text-sm uppercase tracking-wider hover:underline"
                   >
                     Learn More →
@@ -202,7 +255,9 @@ export default function Events() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-navy via-navy/50 to-transparent" />
                 <div className="absolute bottom-0 left-0 right-0 p-6">
-                  <h3 className="font-display text-2xl text-white mb-2">{venue.name}</h3>
+                  <h3 className="font-display text-2xl text-white mb-2">
+                    {venue.name}
+                  </h3>
                   <div className="flex flex-wrap gap-4 text-white/70 text-sm">
                     <span>{venue.size}</span>
                     <span>•</span>
@@ -240,7 +295,9 @@ export default function Events() {
                 <div className="w-16 h-16 mx-auto mb-6 flex items-center justify-center rounded-full bg-gold/10">
                   <service.icon className="w-8 h-8 text-gold" />
                 </div>
-                <h3 className="font-display text-xl text-white mb-2">{service.name}</h3>
+                <h3 className="font-display text-xl text-white mb-2">
+                  {service.name}
+                </h3>
                 <p className="text-white/60">{service.description}</p>
               </motion.div>
             ))}
@@ -257,7 +314,8 @@ export default function Events() {
             viewport={{ once: true }}
             className="font-display text-4xl text-navy mb-6"
           >
-            Let's Create Something <span className="text-gold italic">Extraordinary</span>
+            Let's Create Something{" "}
+            <span className="text-gold italic">Extraordinary</span>
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -266,7 +324,7 @@ export default function Events() {
             transition={{ delay: 0.1 }}
             className="text-muted-foreground mb-8"
           >
-            Our dedicated events team is ready to bring your vision to life. 
+            Our dedicated events team is ready to bring your vision to life.
             Contact us to begin planning your perfect event.
           </motion.p>
           <motion.div

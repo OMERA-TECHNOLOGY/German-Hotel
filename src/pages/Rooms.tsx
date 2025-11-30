@@ -2,7 +2,16 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import Layout from "@/components/layout/Layout";
 import SectionHeading from "@/components/ui/SectionHeading";
-import { Wifi, Coffee, Bath, Tv, Wind, UtensilsCrossed, Car, Sparkles } from "lucide-react";
+import {
+  Wifi,
+  Coffee,
+  Bath,
+  Tv,
+  Wind,
+  UtensilsCrossed,
+  Car,
+  Sparkles,
+} from "lucide-react";
 
 const roomCategories = [
   { id: "all", name: "All Rooms" },
@@ -17,66 +26,77 @@ const rooms = [
     id: "presidential-suite",
     name: "Presidential Suite",
     category: "suite",
-    description: "The epitome of luxury with panoramic views, private terrace, and butler service.",
+    description:
+      "The epitome of luxury with panoramic views, private terrace, and butler service.",
     price: "€1,200",
     size: "150 m²",
     beds: "1 King + Living Area",
-    image: "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?auto=format&fit=crop&w=1200&q=80",
+    image:
+      "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?auto=format&fit=crop&w=1200&q=80",
     amenities: ["Private Terrace", "Butler Service", "Jacuzzi", "Office Space"],
   },
   {
     id: "luxury-suite",
     name: "Luxury Suite",
     category: "suite",
-    description: "Expansive living spaces with stunning city views and premium amenities.",
+    description:
+      "Expansive living spaces with stunning city views and premium amenities.",
     price: "€450",
     size: "85 m²",
     beds: "1 King",
-    image: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=80",
+    image:
+      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=80",
     amenities: ["Living Room", "Premium Bar", "Rain Shower", "Smart TV"],
   },
   {
     id: "executive-room",
     name: "Executive Room",
     category: "executive",
-    description: "Sophisticated comfort designed for the discerning business traveler.",
+    description:
+      "Sophisticated comfort designed for the discerning business traveler.",
     price: "€280",
     size: "55 m²",
     beds: "1 King or 2 Queens",
-    image: "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1200&q=80",
+    image:
+      "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1200&q=80",
     amenities: ["Work Desk", "Lounge Access", "Express Laundry", "Mini Bar"],
   },
   {
     id: "deluxe-room",
     name: "Deluxe Room",
     category: "deluxe",
-    description: "Elegant accommodations with refined details and modern comforts.",
+    description:
+      "Elegant accommodations with refined details and modern comforts.",
     price: "€180",
     size: "40 m²",
     beds: "1 King or 2 Double",
-    image: "https://images.unsplash.com/photo-1618773928121-c32242e63f39?auto=format&fit=crop&w=1200&q=80",
+    image: "../../public/photo_2025-11-30_15-02-17.jpg",
     amenities: ["City View", "Premium Bedding", "Marble Bath", "Nespresso"],
   },
   {
     id: "superior-room",
     name: "Superior Room",
     category: "deluxe",
-    description: "Comfortable elegance with thoughtful amenities for a perfect stay.",
+    description:
+      "Comfortable elegance with thoughtful amenities for a perfect stay.",
     price: "€150",
     size: "35 m²",
     beds: "1 Queen or 2 Twin",
-    image: "https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=1200&q=80",
+    image:
+      "https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=1200&q=80",
     amenities: ["Garden View", "Smart TV", "Safe", "Mini Fridge"],
   },
   {
     id: "standard-room",
     name: "Standard Room",
     category: "standard",
-    description: "Essential comfort with all the amenities you need for a pleasant stay.",
+    description:
+      "Essential comfort with all the amenities you need for a pleasant stay.",
     price: "€120",
     size: "28 m²",
     beds: "1 Double or 2 Twin",
-    image: "https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?auto=format&fit=crop&w=1200&q=80",
+    image:
+      "https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?auto=format&fit=crop&w=1200&q=80",
     amenities: ["En-suite Bath", "Flat Screen TV", "Air Conditioning", "Safe"],
   },
 ];
@@ -104,7 +124,7 @@ export default function Rooms() {
           }}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-navy/70 via-navy/50 to-navy/80" />
-        
+
         <div className="relative text-center px-6">
           <motion.span
             initial={{ opacity: 0, y: 10 }}
@@ -127,7 +147,8 @@ export default function Rooms() {
             transition={{ delay: 0.2 }}
             className="max-w-2xl mx-auto text-white/80 text-lg"
           >
-            Discover refined luxury in every detail of our meticulously designed accommodations.
+            Discover refined luxury in every detail of our meticulously designed
+            accommodations.
           </motion.p>
         </div>
       </section>
@@ -188,12 +209,12 @@ export default function Rooms() {
                         className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                       />
                       <div className="image-overlay-subtle" />
-                      
+
                       {/* Category Badge */}
                       <div className="absolute top-4 left-4 bg-navy/80 backdrop-blur-sm px-3 py-1 rounded text-xs text-gold uppercase tracking-wider">
                         {room.category}
                       </div>
-                      
+
                       {/* Price Badge */}
                       <div className="absolute top-4 right-4 bg-gold px-4 py-2 rounded">
                         <span className="font-display text-navy">
@@ -267,17 +288,20 @@ export default function Rooms() {
             {[
               {
                 title: "Romance Package",
-                description: "Champagne, rose petals, couples spa treatment, and candlelit dinner.",
+                description:
+                  "Champagne, rose petals, couples spa treatment, and candlelit dinner.",
                 price: "From €599",
               },
               {
                 title: "Business Elite",
-                description: "Executive suite, airport transfer, lounge access, and meeting room.",
+                description:
+                  "Executive suite, airport transfer, lounge access, and meeting room.",
                 price: "From €399",
               },
               {
                 title: "Weekend Escape",
-                description: "2 nights deluxe room, breakfast, spa access, and late checkout.",
+                description:
+                  "2 nights deluxe room, breakfast, spa access, and late checkout.",
                 price: "From €299",
               },
             ].map((offer, index) => (
@@ -289,11 +313,18 @@ export default function Rooms() {
                 transition={{ delay: index * 0.1 }}
                 className="p-8 border border-gold/30 rounded-lg hover:border-gold transition-colors group"
               >
-                <h3 className="font-display text-2xl text-gold mb-4">{offer.title}</h3>
+                <h3 className="font-display text-2xl text-gold mb-4">
+                  {offer.title}
+                </h3>
                 <p className="text-white/70 mb-6">{offer.description}</p>
                 <div className="flex items-center justify-between">
-                  <span className="font-display text-xl text-white">{offer.price}</span>
-                  <Link to="/contact" className="text-gold text-sm uppercase tracking-wider hover:underline">
+                  <span className="font-display text-xl text-white">
+                    {offer.price}
+                  </span>
+                  <Link
+                    to="/contact"
+                    className="text-gold text-sm uppercase tracking-wider hover:underline"
+                  >
                     Book Now →
                   </Link>
                 </div>

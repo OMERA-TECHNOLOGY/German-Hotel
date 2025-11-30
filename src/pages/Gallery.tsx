@@ -4,47 +4,122 @@ import Layout from "@/components/layout/Layout";
 import SectionHeading from "@/components/ui/SectionHeading";
 import { X, ChevronLeft, ChevronRight, Download, Share2 } from "lucide-react";
 
-const categories = ["All", "Rooms", "Restaurant", "Bar", "Spa", "Events", "Exterior"];
+const categories = [
+  "All",
+  "Rooms",
+  "Restaurant",
+  "Bar",
+  "Spa",
+  "Events",
+  "Exterior",
+];
 
 const galleryImages = [
-  { src: "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80", category: "Exterior", title: "Hotel Facade" },
-  { src: "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?auto=format&fit=crop&w=1200&q=80", category: "Rooms", title: "Presidential Suite" },
-  { src: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=80", category: "Rooms", title: "Luxury Suite" },
-  { src: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1200&q=80", category: "Restaurant", title: "Fine Dining" },
-  { src: "https://images.unsplash.com/photo-1470337458703-46ad1756a187?auto=format&fit=crop&w=1200&q=80", category: "Bar", title: "Cocktail Bar" },
-  { src: "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=1200&q=80", category: "Spa", title: "Spa Treatment" },
-  { src: "https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=1200&q=80", category: "Events", title: "Grand Ballroom" },
-  { src: "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1200&q=80", category: "Rooms", title: "Executive Room" },
-  { src: "https://images.unsplash.com/photo-1618773928121-c32242e63f39?auto=format&fit=crop&w=1200&q=80", category: "Rooms", title: "Deluxe Room" },
-  { src: "https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=1200&q=80", category: "Restaurant", title: "Gourmet Cuisine" },
-  { src: "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&w=1200&q=80", category: "Bar", title: "Signature Cocktails" },
-  { src: "https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1200&q=80", category: "Spa", title: "Sauna" },
-  { src: "https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&w=1200&q=80", category: "Exterior", title: "Hotel Lobby" },
-  { src: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1200&q=80", category: "Spa", title: "Fitness Center" },
-  { src: "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1200&q=80", category: "Exterior", title: "Pool Area" },
-  { src: "https://images.unsplash.com/photo-1571902943202-507ec2618e8f?auto=format&fit=crop&w=1200&q=80", category: "Spa", title: "Indoor Pool" },
+  {
+    src: "../../public/30531504_961700080651851_4006167939760783360_n.jpg",
+    category: "Exterior",
+    title: "Hotel Facade",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?auto=format&fit=crop&w=1200&q=80",
+    category: "Rooms",
+    title: "Presidential Suite",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=80",
+    category: "Rooms",
+    title: "Luxury Suite",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1200&q=80",
+    category: "Restaurant",
+    title: "Fine Dining",
+  },
+  {
+    src: "../../public/508044503_3047734412048397_5754236065800134481_n.jpg",
+    category: "Bar",
+    title: "Cocktail Bar",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=1200&q=80",
+    category: "Spa",
+    title: "Spa Treatment",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=1200&q=80",
+    category: "Events",
+    title: "Grand Ballroom",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1200&q=80",
+    category: "Rooms",
+    title: "Executive Room",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1618773928121-c32242e63f39?auto=format&fit=crop&w=1200&q=80",
+    category: "Rooms",
+    title: "Deluxe Room",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=1200&q=80",
+    category: "Restaurant",
+    title: "Gourmet Cuisine",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&w=1200&q=80",
+    category: "Bar",
+    title: "Signature Cocktails",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1200&q=80",
+    category: "Spa",
+    title: "Sauna",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&w=1200&q=80",
+    category: "Exterior",
+    title: "Hotel Lobby",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1200&q=80",
+    category: "Spa",
+    title: "Fitness Center",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1200&q=80",
+    category: "Exterior",
+    title: "Pool Area",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1571902943202-507ec2618e8f?auto=format&fit=crop&w=1200&q=80",
+    category: "Spa",
+    title: "Indoor Pool",
+  },
 ];
 
 export default function Gallery() {
   const [activeCategory, setActiveCategory] = useState("All");
   const [lightboxImage, setLightboxImage] = useState<number | null>(null);
 
-  const filteredImages = activeCategory === "All"
-    ? galleryImages
-    : galleryImages.filter(img => img.category === activeCategory);
+  const filteredImages =
+    activeCategory === "All"
+      ? galleryImages
+      : galleryImages.filter((img) => img.category === activeCategory);
 
   const openLightbox = (index: number) => setLightboxImage(index);
   const closeLightbox = () => setLightboxImage(null);
-  
+
   const nextImage = () => {
     if (lightboxImage !== null) {
       setLightboxImage((lightboxImage + 1) % filteredImages.length);
     }
   };
-  
+
   const prevImage = () => {
     if (lightboxImage !== null) {
-      setLightboxImage((lightboxImage - 1 + filteredImages.length) % filteredImages.length);
+      setLightboxImage(
+        (lightboxImage - 1 + filteredImages.length) % filteredImages.length
+      );
     }
   };
 
@@ -59,7 +134,7 @@ export default function Gallery() {
           }}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-navy/60 via-navy/40 to-navy/80" />
-        
+
         <div className="relative text-center px-6">
           <motion.span
             initial={{ opacity: 0, y: 10 }}
@@ -100,7 +175,7 @@ export default function Gallery() {
           </div>
 
           {/* Masonry Grid */}
-          <motion.div 
+          <motion.div
             layout
             className="columns-1 md:columns-2 lg:columns-3 xl:columns-4 gap-4 space-y-4"
           >
@@ -159,13 +234,19 @@ export default function Gallery() {
 
             {/* Navigation */}
             <button
-              onClick={(e) => { e.stopPropagation(); prevImage(); }}
+              onClick={(e) => {
+                e.stopPropagation();
+                prevImage();
+              }}
               className="absolute left-6 top-1/2 -translate-y-1/2 w-12 h-12 flex items-center justify-center rounded-full bg-white/10 text-white hover:bg-gold hover:text-navy transition-colors"
             >
               <ChevronLeft className="w-6 h-6" />
             </button>
             <button
-              onClick={(e) => { e.stopPropagation(); nextImage(); }}
+              onClick={(e) => {
+                e.stopPropagation();
+                nextImage();
+              }}
               className="absolute right-6 top-1/2 -translate-y-1/2 w-12 h-12 flex items-center justify-center rounded-full bg-white/10 text-white hover:bg-gold hover:text-navy transition-colors"
             >
               <ChevronRight className="w-6 h-6" />

@@ -4,7 +4,7 @@ import SectionHeading from "../ui/SectionHeading";
 
 const images = [
   {
-    src: "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=800&q=80",
+    src: "../../public/image.png",
     alt: "Hotel Exterior",
     span: "col-span-2 row-span-2",
   },
@@ -58,7 +58,9 @@ export default function Gallery() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-navy/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               <div className="absolute bottom-4 left-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <span className="font-display text-white text-lg">{image.alt}</span>
+                <span className="font-display text-white text-lg">
+                  {image.alt}
+                </span>
               </div>
             </motion.div>
           ))}

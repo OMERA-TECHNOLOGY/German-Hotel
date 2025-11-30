@@ -5,47 +5,105 @@ import SectionHeading from "@/components/ui/SectionHeading";
 import { Award, Users, Globe, Heart, Star, Building } from "lucide-react";
 
 const timeline = [
-  { year: "1998", title: "The Beginning", description: "German Hotel opens its doors, establishing a new standard in luxury hospitality." },
-  { year: "2005", title: "First Michelin Star", description: "Our restaurant receives its first Michelin star recognition." },
-  { year: "2010", title: "Spa Expansion", description: "Opening of the award-winning Serenity Spa & Wellness Center." },
-  { year: "2015", title: "Global Recognition", description: "Named among the World's Top 100 Hotels by Travel + Leisure." },
-  { year: "2020", title: "Sustainability Focus", description: "Achieved carbon-neutral certification and eco-luxury status." },
-  { year: "2024", title: "Continuing Excellence", description: "Celebrating 25+ years of unparalleled hospitality." },
+  {
+    year: "1998",
+    title: "The Beginning",
+    description:
+      "German Hotel opens its doors, establishing a new standard in luxury hospitality.",
+  },
+  {
+    year: "2005",
+    title: "First Michelin Star",
+    description: "Our restaurant receives its first Michelin star recognition.",
+  },
+  {
+    year: "2010",
+    title: "Spa Expansion",
+    description: "Opening of the award-winning Serenity Spa & Wellness Center.",
+  },
+  {
+    year: "2015",
+    title: "Global Recognition",
+    description: "Named among the World's Top 100 Hotels by Travel + Leisure.",
+  },
+  {
+    year: "2020",
+    title: "Sustainability Focus",
+    description: "Achieved carbon-neutral certification and eco-luxury status.",
+  },
+  {
+    year: "2024",
+    title: "Continuing Excellence",
+    description: "Celebrating 25+ years of unparalleled hospitality.",
+  },
 ];
 
 const awards = [
-  { icon: Star, name: "Michelin Star", year: "2020-2024", org: "Michelin Guide" },
+  {
+    icon: Star,
+    name: "Michelin Star",
+    year: "2020-2024",
+    org: "Michelin Guide",
+  },
   { icon: Globe, name: "World's Best", year: "2023", org: "Travel + Leisure" },
   { icon: Heart, name: "Best Spa", year: "2024", org: "World Spa Awards" },
-  { icon: Building, name: "Historic Hotel", year: "2022", org: "European Heritage" },
+  {
+    icon: Building,
+    name: "Historic Hotel",
+    year: "2022",
+    org: "European Heritage",
+  },
 ];
 
 const leadership = [
   {
     name: "Friedrich Müller",
     role: "General Manager",
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=400&q=80",
+    image:
+      "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=400&q=80",
     bio: "With over 30 years in luxury hospitality, Friedrich leads German Hotel with passion and precision.",
   },
   {
     name: "Anna Schneider",
     role: "Director of Guest Experience",
-    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=400&q=80",
+    image:
+      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=400&q=80",
     bio: "Anna ensures every guest receives personalized service that exceeds expectations.",
   },
   {
     name: "Hans Weber",
     role: "Executive Chef",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80",
+    image:
+      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80",
     bio: "A culinary artist whose innovative cuisine has earned international acclaim.",
   },
 ];
 
 const values = [
-  { icon: Heart, title: "Passion", description: "We are passionate about creating extraordinary experiences for every guest." },
-  { icon: Star, title: "Excellence", description: "We pursue perfection in every detail, from service to amenities." },
-  { icon: Users, title: "Warmth", description: "We treat every guest as family, with genuine care and attention." },
-  { icon: Globe, title: "Sustainability", description: "We are committed to preserving our environment for future generations." },
+  {
+    icon: Heart,
+    title: "Passion",
+    description:
+      "We are passionate about creating extraordinary experiences for every guest.",
+  },
+  {
+    icon: Star,
+    title: "Excellence",
+    description:
+      "We pursue perfection in every detail, from service to amenities.",
+  },
+  {
+    icon: Users,
+    title: "Warmth",
+    description:
+      "We treat every guest as family, with genuine care and attention.",
+  },
+  {
+    icon: Globe,
+    title: "Sustainability",
+    description:
+      "We are committed to preserving our environment for future generations.",
+  },
 ];
 
 export default function About() {
@@ -60,7 +118,7 @@ export default function About() {
           }}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-navy/60 via-navy/40 to-navy/80" />
-        
+
         <div className="relative text-center px-6">
           <motion.span
             initial={{ opacity: 0, y: 10 }}
@@ -83,7 +141,8 @@ export default function About() {
             transition={{ delay: 0.2 }}
             className="max-w-2xl mx-auto text-white/80 text-lg"
           >
-            A legacy of excellence spanning over 25 years of unparalleled luxury hospitality.
+            A legacy of excellence spanning over 25 years of unparalleled luxury
+            hospitality.
           </motion.p>
         </div>
       </section>
@@ -101,25 +160,29 @@ export default function About() {
                 Since 1998
               </span>
               <h2 className="font-display text-4xl md:text-5xl text-navy mb-6">
-                A Legacy of <span className="text-gold italic">Timeless Elegance</span>
+                A Legacy of{" "}
+                <span className="text-gold italic">Timeless Elegance</span>
               </h2>
               <div className="gold-line w-24 mb-8" />
               <p className="text-muted-foreground leading-relaxed mb-6">
-                German Hotel was founded with a singular vision: to create a sanctuary where 
-                guests could experience the finest in luxury hospitality. From our elegant 
-                façade to our meticulously appointed interiors, every element reflects our 
-                unwavering commitment to excellence.
+                German Hotel was founded with a singular vision: to create a
+                sanctuary where guests could experience the finest in luxury
+                hospitality. From our elegant façade to our meticulously
+                appointed interiors, every element reflects our unwavering
+                commitment to excellence.
               </p>
               <p className="text-muted-foreground leading-relaxed mb-6">
-                Over the decades, we have welcomed royalty, celebrities, and discerning 
-                travelers from around the world. Each has discovered what makes German Hotel 
-                truly exceptional – not just our world-class facilities, but the warmth, 
-                attention to detail, and genuine care that define every interaction.
+                Over the decades, we have welcomed royalty, celebrities, and
+                discerning travelers from around the world. Each has discovered
+                what makes German Hotel truly exceptional – not just our
+                world-class facilities, but the warmth, attention to detail, and
+                genuine care that define every interaction.
               </p>
               <p className="text-muted-foreground leading-relaxed">
-                Today, as we celebrate over 25 years of hospitality excellence, we remain 
-                dedicated to our founding principles while continuously innovating to exceed 
-                the expectations of our guests.
+                Today, as we celebrate over 25 years of hospitality excellence,
+                we remain dedicated to our founding principles while
+                continuously innovating to exceed the expectations of our
+                guests.
               </p>
             </motion.div>
 
@@ -135,8 +198,12 @@ export default function About() {
                 className="rounded-lg shadow-2xl"
               />
               <div className="absolute -bottom-6 -left-6 bg-navy p-6 rounded-lg shadow-xl">
-                <span className="block font-display text-4xl text-gold">25+</span>
-                <span className="text-white/70 text-sm">Years of Excellence</span>
+                <span className="block font-display text-4xl text-gold">
+                  25+
+                </span>
+                <span className="text-white/70 text-sm">
+                  Years of Excellence
+                </span>
               </div>
             </motion.div>
           </div>
@@ -169,9 +236,17 @@ export default function About() {
                     index % 2 === 0 ? "lg:flex-row-reverse" : ""
                   }`}
                 >
-                  <div className={`flex-1 ${index % 2 === 0 ? "lg:text-left" : "lg:text-right"}`}>
-                    <span className="text-gold font-display text-2xl">{item.year}</span>
-                    <h3 className="font-display text-xl text-white mt-2 mb-3">{item.title}</h3>
+                  <div
+                    className={`flex-1 ${
+                      index % 2 === 0 ? "lg:text-left" : "lg:text-right"
+                    }`}
+                  >
+                    <span className="text-gold font-display text-2xl">
+                      {item.year}
+                    </span>
+                    <h3 className="font-display text-xl text-white mt-2 mb-3">
+                      {item.title}
+                    </h3>
                     <p className="text-white/60">{item.description}</p>
                   </div>
                   <div className="w-4 h-4 rounded-full bg-gold relative z-10 hidden lg:block" />
@@ -205,7 +280,9 @@ export default function About() {
                 <div className="w-16 h-16 mx-auto mb-6 flex items-center justify-center rounded-full bg-gold/10">
                   <value.icon className="w-8 h-8 text-gold" />
                 </div>
-                <h3 className="font-display text-xl text-navy mb-3">{value.title}</h3>
+                <h3 className="font-display text-xl text-navy mb-3">
+                  {value.title}
+                </h3>
                 <p className="text-muted-foreground">{value.description}</p>
               </motion.div>
             ))}
@@ -233,7 +310,9 @@ export default function About() {
                 className="luxury-card p-8 text-center"
               >
                 <award.icon className="w-12 h-12 text-gold mx-auto mb-4" />
-                <h3 className="font-display text-xl text-navy mb-1">{award.name}</h3>
+                <h3 className="font-display text-xl text-navy mb-1">
+                  {award.name}
+                </h3>
                 <p className="text-gold mb-2">{award.year}</p>
                 <p className="text-muted-foreground text-sm">{award.org}</p>
               </motion.div>
@@ -270,7 +349,9 @@ export default function About() {
                   <div className="image-overlay" />
                 </div>
                 <div className="p-6">
-                  <h3 className="font-display text-2xl text-navy mb-1">{person.name}</h3>
+                  <h3 className="font-display text-2xl text-navy mb-1">
+                    {person.name}
+                  </h3>
                   <p className="text-gold mb-4">{person.role}</p>
                   <p className="text-muted-foreground text-sm">{person.bio}</p>
                 </div>
@@ -289,7 +370,8 @@ export default function About() {
             viewport={{ once: true }}
             className="font-display text-4xl mb-6"
           >
-            Experience the <span className="text-gold italic">German Hotel</span> Difference
+            Experience the{" "}
+            <span className="text-gold italic">German Hotel</span> Difference
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -298,7 +380,7 @@ export default function About() {
             transition={{ delay: 0.1 }}
             className="text-white/70 mb-8"
           >
-            We invite you to discover why German Hotel remains the choice of 
+            We invite you to discover why German Hotel remains the choice of
             discerning travelers worldwide.
           </motion.p>
           <motion.div
