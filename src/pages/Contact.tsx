@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import Layout from "@/components/layout/Layout";
-import SectionHeading from "@/components/ui/SectionHeading";
 import {
   Phone,
   Mail,
@@ -13,6 +12,8 @@ import {
   Bed,
   Navigation,
   ExternalLink,
+  Map,
+  Satellite,
 } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
@@ -29,6 +30,7 @@ export default function Contact() {
     guests: "2",
     roomType: "deluxe",
   });
+  const [mapType, setMapType] = useState<"roadmap" | "satellite">("roadmap");
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -56,6 +58,16 @@ export default function Contact() {
     >
   ) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const getMapUrl = () => {
+    const baseUrl =
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3945.579299039066!2d39.26050970000001!3d8.5401585!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x164b21de626fc2e1%3A0x53ebfbdd9c51c033!2sGerman%20Hotel!5e0!3m2!1sen!2set!4v1764535028839!5m2!1sen!2set";
+
+    if (mapType === "satellite") {
+      return baseUrl + "&maptype=satellite";
+    }
+    return baseUrl;
   };
 
   return (
@@ -437,12 +449,12 @@ export default function Contact() {
                       Located in the heart of Adama, easily accessible from the
                       main highway.
                     </p>
-                    <div className="flex gap-3">
+                    <div className="flex flex-col sm:flex-row gap-3">
                       <a
-                        href="https://maps.google.com"
+                        href="https://maps.google.com/maps?q=German+Hotel+Adama"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="btn-luxury flex items-center gap-2 text-sm px-4 py-2"
+                        className="btn-luxury flex items-center justify-center gap-2 text-sm px-4 py-2"
                       >
                         <Navigation className="w-4 h-4" />
                         Get Directions
@@ -451,7 +463,7 @@ export default function Contact() {
                         href="https://maps.app.goo.gl"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="btn-outline flex items-center gap-2 text-sm px-4 py-2"
+                        className="btn-outline flex items-center justify-center gap-2 text-sm px-4 py-2"
                       >
                         <ExternalLink className="w-4 h-4" />
                         Open Maps
@@ -477,46 +489,63 @@ export default function Contact() {
               viewport={{ once: true }}
               className="lg:col-span-2 h-96 lg:h-auto relative"
             >
-              <div className="absolute inset-0 bg-gradient-to-br from-navy/20 to-navy/40 z-10" />
-
-              {/* Custom Map Controls */}
-              <div className="absolute top-4 right-4 z-20 flex gap-2">
-                <button className="bg-white p-2 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
-                  <Navigation className="w-4 h-4 text-navy" />
+              {/* Map Type Controls */}
+              <div className="absolute top-4 right-4 z-20 flex gap-2 bg-white/90 backdrop-blur-sm rounded-lg p-1 shadow-lg">
+                <button
+                  onClick={() => setMapType("roadmap")}
+                  className={`p-2 rounded-md transition-all ${
+                    mapType === "roadmap"
+                      ? "bg-gold text-white"
+                      : "text-navy hover:bg-gray-100"
+                  }`}
+                  title="Map View"
+                >
+                  <Map className="w-4 h-4" />
                 </button>
-                <button className="bg-white p-2 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
-                  <MapPin className="w-4 h-4 text-navy" />
+                <button
+                  onClick={() => setMapType("satellite")}
+                  className={`p-2 rounded-md transition-all ${
+                    mapType === "satellite"
+                      ? "bg-gold text-white"
+                      : "text-navy hover:bg-gray-100"
+                  }`}
+                  title="Satellite View"
+                >
+                  <Satellite className="w-4 h-4" />
                 </button>
               </div>
 
-              {/* Map Pointer */}
-              <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20">
+              {/* Location Indicator - Positioned absolutely but doesn't interfere with map */}
+              <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 pointer-events-none">
                 <motion.div
                   initial={{ scale: 0 }}
                   whileInView={{ scale: 1 }}
                   viewport={{ once: true }}
                   transition={{ delay: 0.5 }}
-                  className="w-16 h-16 bg-gold rounded-full flex items-center justify-center shadow-2xl"
+                  className="w-12 h-12 bg-gold rounded-full flex items-center justify-center shadow-2xl"
                 >
-                  <MapPin className="w-6 h-6 text-white fill-current" />
+                  <MapPin className="w-5 h-5 text-white fill-current" />
                 </motion.div>
                 <motion.div
                   initial={{ scale: 0 }}
                   whileInView={{ scale: 1 }}
                   viewport={{ once: true }}
                   transition={{ delay: 0.7 }}
-                  className="absolute top-0 left-0 w-16 h-16 border-2 border-gold rounded-full animate-ping"
+                  className="absolute top-0 left-0 w-12 h-12 border-2 border-gold rounded-full animate-ping pointer-events-none"
                 />
               </div>
 
+              {/* Clean Map - No overlays blocking interaction */}
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3945.579299039066!2d39.26050970000001!3d8.5401585!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x164b21de626fc2e1%3A0x53ebfbdd9c51c033!2sGerman%20Hotel!5e0!3m2!1sen!2set!4v1764535028839!5m2!1sen!2set"
+                src={getMapUrl()}
                 width="100%"
                 height="100%"
                 style={{
                   border: 0,
                   filter:
-                    "sepia(0.1) hue-rotate(180deg) saturate(1.2) contrast(1.1)",
+                    mapType === "satellite"
+                      ? "none"
+                      : "sepia(0.1) hue-rotate(180deg) saturate(1.1) contrast(1.05)",
                 }}
                 allowFullScreen
                 loading="lazy"
