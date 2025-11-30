@@ -39,11 +39,17 @@ export default function Header() {
       <div className="hidden lg:block bg-navy text-white/80 text-sm py-2">
         <div className="container mx-auto px-6 flex justify-between items-center">
           <div className="flex items-center gap-6">
-            <a href="tel:+491234567890" className="flex items-center gap-2 hover:text-gold transition-colors">
+            <a
+              href="tel:+491234567890"
+              className="flex items-center gap-2 hover:text-gold transition-colors"
+            >
               <Phone className="w-4 h-4" />
               <span>+49 123 456 7890</span>
             </a>
-            <a href="mailto:info@germanhotel.com" className="flex items-center gap-2 hover:text-gold transition-colors">
+            <a
+              href="mailto:info@germanhotel.com"
+              className="flex items-center gap-2 hover:text-gold transition-colors"
+            >
               <Mail className="w-4 h-4" />
               <span>info@germanhotel.com</span>
             </a>
@@ -56,10 +62,10 @@ export default function Header() {
 
       {/* Main Header */}
       <header
-        className={`fixed top-0 lg:top-10 left-0 right-0 z-50 transition-all duration-500 ${
+        className={`fixed left-0 right-0 z-50 transition-all duration-500 ${
           isScrolled
-            ? "bg-navy/95 backdrop-blur-lg shadow-lg shadow-black/20"
-            : "bg-transparent"
+            ? "top-0 bg-navy/95 backdrop-blur-lg shadow-lg shadow-black/20"
+            : "lg:top-10 top-0 bg-transparent"
         }`}
       >
         <div className="container mx-auto px-6">
@@ -115,10 +121,7 @@ export default function Header() {
               animate={{ opacity: 1, x: 0 }}
               className="hidden lg:block"
             >
-              <Link
-                to="/contact"
-                className="btn-luxury text-xs py-3 px-6"
-              >
+              <Link to="/contact" className="btn-luxury text-xs py-3 px-6">
                 Book Now
               </Link>
             </motion.div>
@@ -199,7 +202,9 @@ export default function Header() {
           to="/contact"
           className="flex items-center justify-center w-14 h-14 bg-gold rounded-full shadow-lg animate-pulse-gold"
         >
-          <span className="font-display text-navy text-xs font-semibold">Book</span>
+          <span className="font-display text-navy text-xs font-semibold">
+            Book
+          </span>
         </Link>
       </motion.div>
     </>
