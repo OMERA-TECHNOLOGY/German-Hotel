@@ -1,0 +1,322 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* German Hotel Luxury Design System */
+
+@layer base {
+  :root {
+    /* Primary Colors */
+    --gold: 43 72% 52%;
+    --gold-light: 43 72% 62%;
+    --gold-dark: 43 72% 42%;
+    --navy: 213 72% 11%;
+    --navy-light: 213 60% 18%;
+    --champagne: 30 53% 91%;
+    --charcoal: 0 0% 7%;
+    
+    /* Semantic Colors */
+    --background: 0 0% 100%;
+    --foreground: 213 72% 11%;
+
+    --card: 30 53% 97%;
+    --card-foreground: 213 72% 11%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 213 72% 11%;
+
+    --primary: 43 72% 52%;
+    --primary-foreground: 213 72% 11%;
+
+    --secondary: 213 72% 11%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 30 20% 94%;
+    --muted-foreground: 213 30% 40%;
+
+    --accent: 30 53% 91%;
+    --accent-foreground: 213 72% 11%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 30 20% 85%;
+    --input: 30 20% 85%;
+    --ring: 43 72% 52%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 213 72% 11%;
+    --sidebar-foreground: 0 0% 100%;
+    --sidebar-primary: 43 72% 52%;
+    --sidebar-primary-foreground: 213 72% 11%;
+    --sidebar-accent: 213 60% 18%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 213 50% 20%;
+    --sidebar-ring: 43 72% 52%;
+  }
+
+  .dark {
+    --background: 213 72% 11%;
+    --foreground: 0 0% 98%;
+
+    --card: 213 60% 14%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 213 72% 11%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 43 72% 52%;
+    --primary-foreground: 213 72% 11%;
+
+    --secondary: 30 53% 91%;
+    --secondary-foreground: 213 72% 11%;
+
+    --muted: 213 50% 18%;
+    --muted-foreground: 30 20% 70%;
+
+    --accent: 213 60% 18%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 213 50% 20%;
+    --input: 213 50% 20%;
+    --ring: 43 72% 52%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display;
+  }
+}
+
+@layer components {
+  /* Glass morphism effect */
+  .glass {
+    @apply bg-white/10 backdrop-blur-md border border-white/20;
+  }
+
+  .glass-dark {
+    @apply bg-black/20 backdrop-blur-md border border-white/10;
+  }
+
+  /* Gold glow effect */
+  .gold-glow {
+    box-shadow: 0 0 30px hsl(var(--gold) / 0.3), 0 0 60px hsl(var(--gold) / 0.1);
+  }
+
+  .gold-glow-sm {
+    box-shadow: 0 0 15px hsl(var(--gold) / 0.3);
+  }
+
+  /* Text gradient */
+  .text-gradient-gold {
+    @apply bg-gradient-to-r from-gold via-gold-light to-gold bg-clip-text text-transparent;
+  }
+
+  /* Premium card styling */
+  .luxury-card {
+    @apply relative overflow-hidden rounded-lg bg-card transition-all duration-500;
+    box-shadow: 0 4px 20px hsl(var(--navy) / 0.08);
+  }
+
+  .luxury-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px hsl(var(--navy) / 0.15), 0 0 30px hsl(var(--gold) / 0.1);
+  }
+
+  /* Premium button */
+  .btn-luxury {
+    @apply relative inline-flex items-center justify-center px-8 py-4 font-display text-sm uppercase tracking-[0.2em] transition-all duration-300;
+    @apply bg-gradient-to-r from-gold to-gold-light text-navy;
+    @apply hover:shadow-lg hover:shadow-gold/30 hover:scale-105;
+  }
+
+  .btn-luxury-outline {
+    @apply relative inline-flex items-center justify-center px-8 py-4 font-display text-sm uppercase tracking-[0.2em] transition-all duration-300;
+    @apply border-2 border-gold text-gold bg-transparent;
+    @apply hover:bg-gold hover:text-navy hover:shadow-lg hover:shadow-gold/30;
+  }
+
+  .btn-luxury-dark {
+    @apply relative inline-flex items-center justify-center px-8 py-4 font-display text-sm uppercase tracking-[0.2em] transition-all duration-300;
+    @apply bg-navy text-white border border-gold/30;
+    @apply hover:bg-navy-light hover:border-gold hover:shadow-lg hover:shadow-gold/20;
+  }
+
+  /* Shimmer animation */
+  .shimmer {
+    @apply relative overflow-hidden;
+  }
+
+  .shimmer::before {
+    content: '';
+    @apply absolute inset-0 -translate-x-full;
+    background: linear-gradient(90deg, transparent, hsl(var(--gold) / 0.1), transparent);
+    animation: shimmer 3s infinite;
+  }
+
+  /* Decorative line */
+  .gold-line {
+    @apply h-px bg-gradient-to-r from-transparent via-gold to-transparent;
+  }
+
+  .gold-line-vertical {
+    @apply w-px bg-gradient-to-b from-transparent via-gold to-transparent;
+  }
+
+  /* Section styling */
+  .section-padding {
+    @apply py-20 md:py-32 px-4 md:px-8;
+  }
+
+  /* Parallax container */
+  .parallax-container {
+    @apply relative overflow-hidden;
+  }
+
+  /* Premium image overlay */
+  .image-overlay {
+    @apply absolute inset-0 bg-gradient-to-t from-navy via-navy/50 to-transparent;
+  }
+
+  .image-overlay-subtle {
+    @apply absolute inset-0 bg-gradient-to-t from-navy/80 via-transparent to-transparent;
+  }
+}
+
+@layer utilities {
+  /* Animation delays */
+  .animation-delay-100 { animation-delay: 100ms; }
+  .animation-delay-200 { animation-delay: 200ms; }
+  .animation-delay-300 { animation-delay: 300ms; }
+  .animation-delay-400 { animation-delay: 400ms; }
+  .animation-delay-500 { animation-delay: 500ms; }
+  .animation-delay-600 { animation-delay: 600ms; }
+  .animation-delay-700 { animation-delay: 700ms; }
+  .animation-delay-800 { animation-delay: 800ms; }
+}
+
+/* Keyframes */
+@keyframes shimmer {
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes pulse-gold {
+  0%, 100% {
+    box-shadow: 0 0 20px hsl(var(--gold) / 0.4);
+  }
+  50% {
+    box-shadow: 0 0 40px hsl(var(--gold) / 0.6);
+  }
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in-down {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scale-in {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slide-in-left {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-in-right {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes rotate-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(var(--navy));
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--gold));
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--gold-light));
+}
+
+/* Selection color */
+::selection {
+  background: hsl(var(--gold) / 0.3);
+  color: hsl(var(--navy));
+}
