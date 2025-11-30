@@ -14,7 +14,7 @@
     --navy-light: 213 60% 18%;
     --champagne: 30 53% 91%;
     --charcoal: 0 0% 7%;
-    
+
     /* Semantic Colors */
     --background: 0 0% 100%;
     --foreground: 213 72% 11%;
@@ -96,7 +96,12 @@
     @apply bg-background text-foreground font-body antialiased;
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     @apply font-display;
   }
 }
@@ -133,7 +138,8 @@
 
   .luxury-card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 20px 40px hsl(var(--navy) / 0.15), 0 0 30px hsl(var(--gold) / 0.1);
+    box-shadow: 0 20px 40px hsl(var(--navy) / 0.15),
+      0 0 30px hsl(var(--gold) / 0.1);
   }
 
   /* Premium button */
@@ -161,9 +167,14 @@
   }
 
   .shimmer::before {
-    content: '';
+    content: "";
     @apply absolute inset-0 -translate-x-full;
-    background: linear-gradient(90deg, transparent, hsl(var(--gold) / 0.1), transparent);
+    background: linear-gradient(
+      90deg,
+      transparent,
+      hsl(var(--gold) / 0.1),
+      transparent
+    );
     animation: shimmer 3s infinite;
   }
 
@@ -198,14 +209,30 @@
 
 @layer utilities {
   /* Animation delays */
-  .animation-delay-100 { animation-delay: 100ms; }
-  .animation-delay-200 { animation-delay: 200ms; }
-  .animation-delay-300 { animation-delay: 300ms; }
-  .animation-delay-400 { animation-delay: 400ms; }
-  .animation-delay-500 { animation-delay: 500ms; }
-  .animation-delay-600 { animation-delay: 600ms; }
-  .animation-delay-700 { animation-delay: 700ms; }
-  .animation-delay-800 { animation-delay: 800ms; }
+  .animation-delay-100 {
+    animation-delay: 100ms;
+  }
+  .animation-delay-200 {
+    animation-delay: 200ms;
+  }
+  .animation-delay-300 {
+    animation-delay: 300ms;
+  }
+  .animation-delay-400 {
+    animation-delay: 400ms;
+  }
+  .animation-delay-500 {
+    animation-delay: 500ms;
+  }
+  .animation-delay-600 {
+    animation-delay: 600ms;
+  }
+  .animation-delay-700 {
+    animation-delay: 700ms;
+  }
+  .animation-delay-800 {
+    animation-delay: 800ms;
+  }
 }
 
 /* Keyframes */
@@ -216,7 +243,8 @@
 }
 
 @keyframes float {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0);
   }
   50% {
@@ -225,7 +253,8 @@
 }
 
 @keyframes pulse-gold {
-  0%, 100% {
+  0%,
+  100% {
     box-shadow: 0 0 20px hsl(var(--gold) / 0.4);
   }
   50% {
@@ -320,3 +349,4 @@
   background: hsl(var(--gold) / 0.3);
   color: hsl(var(--navy));
 }
+
